@@ -1,0 +1,209 @@
+:root {
+  --primary-color: #0f132b;
+  --secondary-color: #ff2f5b;
+}
+
+.about {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  -webkit-animation-name: open;
+  animation-name: open;
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.95, 1, 0.95);
+  animation-timing-function: cubic-bezier(0, 0.95, 1, 0.95);
+}
+
+.about-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-animation: opacity;
+  animation: opacity;
+  -webkit-animation-duration: 1200ms;
+  animation-duration: 1200ms;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+/* Animation classes */
+.about-close-animation {
+  -webkit-animation-name: aboutclose;
+  animation-name: aboutclose;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.reverse-opacity {
+  -webkit-animation-name: reopacity;
+  animation-name: reopacity;
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+#about-close {
+  right: 0;
+}
+.about-mobileClose{
+  display: none;
+  font-size: 42px;
+  position: fixed;
+  top: 4%;
+  right: 8%;
+}
+.what-is-card {
+  display: flex;
+  margin: 0 10px;
+}
+.card-img {
+  width: 100%;
+  /* display: block; */
+}
+.card-content {
+  /* background: rgba(128, 128, 128, 0.342); */
+  max-width: 450px;
+  padding: 50px 0 0;
+  margin-left: 30px;
+
+  display: flex;
+  font-size: 20px;
+
+  /* align-items:; */
+  flex-direction: column;
+}
+.card-content h2 {
+  font-size: 200%;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: 5px solid white;
+}
+.card-content span {
+  font-family: sans-serif, serif;
+  line-height: 28px;
+  text-indent: 1.5em;
+
+  padding-top: 30px;
+  border-top: 1px solid gray;
+}
+.text-red {
+  color: #ff2f5b;
+  display: inline;
+  font-weight: bold;
+}
+
+@-webkit-keyframes reopacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes reopacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes open {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+@keyframes open {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0%;
+  }
+}
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes aboutclose {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+@keyframes aboutclose {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+/*  for mobile dumbs */
+@media only screen and (max-width: 768px) {
+  #about-close {
+    display: none !important;
+  }
+  .about-mobileClose {
+    display: block;
+    display: block;
+    position: fixed;
+    animation-name: closeopacity;
+    -webkit-animation-name: closeopacity;
+    -webkit-animation-duration: 1400ms;
+    animation-duration: 1400ms;
+    cursor: pointer;
+  }
+}
+
+@keyframes closeopacity {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

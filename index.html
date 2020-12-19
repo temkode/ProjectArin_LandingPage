@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-175463119-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-175463119-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Project Arin, Syberpong, Arin, Mongolia, Game"/>
+    <meta name="author" content= "Syberpong" />
+    <meta
+      name="description"
+      content="Play as Arin to uncover the secrets of a post apocalyptic 2084 Mongolia, revive its technology through scientific puzzles, and combat projects gone awry."
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" href="resources/css/bel/modal.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/bel/about.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
+    <link rel="icon" type="image/png" href="resources/img/favicon.ico" />
+    <title>Project Arin</title>
+  </head>
+  <body>
+    <main>
+      <div class="home-display">
+        <div class="socials-container animate__animated animate__fadeIn animate__faster">
+          <a target="_blank" href="https://www.facebook.com/huuhyube/?hc_ref=ART1HvIMGB63VyX0y5WiYN3-ki8YRTkZhLpiZVTCIdNcqocwkRycNk4Zmcvq4VcPqZ4&fref=nf">
+            <img
+              src="resources/img/syber-logo-red.png"
+              alt="Syber Pong logo"
+              class="syber-logo"
+            />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/huuhyube/?hc_ref=ART1HvIMGB63VyX0y5WiYN3-ki8YRTkZhLpiZVTCIdNcqocwkRycNk4Zmcvq4VcPqZ4&fref=nf"
+            ><i class="fab fa-facebook"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/syberpong/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          
+        </div>
+        <div class="discord-container animate__animated animate__fadeIn animate__faster">
+          <a target="_blank" href="https://discord.gg/kJGVKGA"
+          ><img src="./resources/img/discord.png" class="discord animate__animated animate__pulse animate__infinite"/></i
+        ></a>
+        
+        </div>
+        <div class="centered-container">
+          <div class="main-content animate__animated animate__fadeIn">
+            <img
+              src="resources/img/arin-logo-white.png"
+              class="arin-logo"
+              alt="Logo of Project Arin"
+            />
+            <a href="play.html" id="play-btn" class="btn btn-bordered" target="_blank"
+              >Launch Teaser</a
+            >
+            <a id="puzzle-btn" class="btn btn-bordered">Puzzles</a>
+            <a id="about-btn" class="btn btn-bordered">About</a>
+          </div>
+        </div>
+        <div
+          class="radiobuttons-container animate__animated animate__fadeInUp animate__fast"
+        >
+          <input type="radio" id="one" name="bg" value="1" checked />
+          <label for="one"></label><br />
+          <input type="radio" id="two" name="bg" value="2" disabled/>
+          <label for="two"></label><br />
+          <input type="radio" id="three" name="bg" value="3" disabled/>
+          <label for="three"></label>
+          <input type="radio" id="four" name="bg" value="4" disabled/>
+          <label for="four"></label><br />
+          <input type="radio" id="five" name="bg" value="5" disabled/>
+          <label for="five"></label><br />
+        </div>
+        <a
+          id="puzzle-btn-border"
+          class="btn btn-link shadow shadow--right animate__animated animate__fadeIn animate__faster"
+          >puzzles</a
+        >
+        <a
+          id="about-btn-border"
+          class="btn btn-link shadow shadow--left animate__animated animate__fadeIn animate__faster"
+          >About</a
+        >
+      </div>
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+          <!-- Back button -->
+          <div class="mobile-close">
+            <a id="closeBtn" class="btn btn-link shadow shadow--left">Back</a>
+          </div>
+          <!-- Mobile back button -->
+          <div class="mobile-button">
+            <a id="mobileClose"><i class="fas fa-chevron-left"></i></a>
+          </div>
+
+          <div class="puzzle-container">
+            <div><h1>E X A M P L E S</h1></div>
+            <div class="grid-item">
+              <div class="radio-container">
+                <img
+                  src="./resources/img/radiogif.gif"
+                  alt="Picture of Radiowave puzzle"
+                />
+                <div class="textcontainer">
+                  <p>
+                    Manipulate the different qualities of waves and use concepts
+                    such as Super Position and Doppler Effect in order to
+                    transform sounds and information in the world of Arin.
+                  </p>
+                </div>
+              </div>
+              <hr />
+              <div class="dc-container">
+                <img
+                  src="./resources/img/dcgif.gif"
+                  alt="Picture of Circuitry puzzle"
+                />
+                <div class="textcontainer">
+                  <p>
+                    Reposition and modify wires and electronic components in
+                    order to remodel entire circuits, bypass security, and
+                    optimise electronics to any context.
+                  </p>
+                </div>
+              </div>
+              <footer>
+                <div class="footer">
+                  <p><i>Credits to Yru and Duna</i></p>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  About page here it goes -->
+
+      <div id="about" class="about">
+        <div id="about-content" class="about-content">
+          <!-- Utasnii back button -->
+          <a id="about-mobileBtn" class="about-mobileClose"><i class="fas fa-chevron-left"></i></a>
+          <!-- Computer iin back button -->
+          <a id="about-close" class="btn btn-link shadow shadow--right">Back</a>
+          <div class="socials-container">
+            <a target="_blank" href="https://www.facebook.com/huuhyube/?hc_ref=ART1HvIMGB63VyX0y5WiYN3-ki8YRTkZhLpiZVTCIdNcqocwkRycNk4Zmcvq4VcPqZ4&fref=nf">
+              <img
+                src="resources/img/syber-logo-red.png"
+                alt="Syber Pong logo"
+                class="syber-logo"
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/huuhyube/?hc_ref=ART1HvIMGB63VyX0y5WiYN3-ki8YRTkZhLpiZVTCIdNcqocwkRycNk4Zmcvq4VcPqZ4&fref=nf"
+              ><i class="fab fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/syberpong/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div
+            class="radiobuttons-container faqButtons"
+          >
+            <input type="radio" id="what" name="faq" value="what" checked />
+            <label for="what"></label><br />
+            <input type="radio" id="when" name="faq" value="when" />
+            <label for="when"></label>
+          </div>
+          <div class="centered-container">
+            <figure class="what-is-card">
+              <div class="card-hero">
+                <img src="resources/img/arin-concept.png" alt="Arin concept art" class="card-img">
+              </div>
+              <div class="card-content">
+                <h2>WHAT<br>IS<br><div class="text-red">PROJECT ARIN</div>?</h2>
+                <span>PROJECT ARIN is a singleplayer, story-based, puzzle, survival-horror game set in <div class="text-red">post-apocalyptic</div> Mongolia, and is the first project developed by SyberPong.</span>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="preload">
+      <img
+        src="resources/img/syber-logo-red.png"
+        alt="Syber Pong logo"
+        class="preload-logo animate__animated animate__zoomIn"
+      />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/124fb15106.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="resources/css/bel/button.js"></script>
+    <script src="resources/js/app.js"></script>
+  </body>
+</html>

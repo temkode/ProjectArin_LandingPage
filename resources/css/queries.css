@@ -1,0 +1,62 @@
+/*  for fucking macs  */
+@media (max-width: 3000px) {
+    body {
+        background-size: calc(100% + 500px);
+    }
+}
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    body {
+        background-size: cover;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    body {
+        background-position-x: 80%;
+    }
+    .arin-logo {
+        width: 275px;
+    }
+    .radiobuttons-container label {
+        margin: 0 7px;
+    }
+    #play-btn {
+        display: none;
+    }
+    
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .arin-logo {
+        width: 250px;
+    }
+    .preload-logo {
+        width: 150px;
+    }
+    .radiobuttons-container label {
+        margin: 0 7px;
+    }
+    #about-btn, #puzzle-btn {
+        display: block;
+    }
+    #about-btn-border, #puzzle-btn-border {
+        display: none;
+    }
+    .card-content {
+        margin-left: 0;
+        font-size: 1em;
+    }
+    .card-hero {
+        display: none;
+    }
+    .what-is-card .card-content:first-child {
+        display: none;
+    }
+    .radiobuttons-container label:before {
+        height: 12px;
+        width: 12px;
+    }
+}

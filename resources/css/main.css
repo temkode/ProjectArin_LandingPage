@@ -1,0 +1,464 @@
+/*
+Secondary color: #FF2F5B
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ----------------------------------------------- */
+/* BASIC SETUP */
+/* ----------------------------------------------- */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: black;
+  font-family: Gilroy, "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+
+  color: white;
+  overflow: hidden;
+}
+
+body {
+  /* background-image: url(img/bg.png); */
+  background-size: calc(100% + 50px);
+  background-position-x: center;
+  background-position-y: 30%;
+}
+
+/* ----------------------------------------------- */
+/* PRELOAD PAGE */
+/* ----------------------------------------------- */
+
+.preload {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f132b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: top 0.4s ease-in;
+  -o-transition: top 0.4s ease-in;
+  transition: top 0.4s ease-in;
+}
+
+.preload-logo {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.preload-text {
+  position: absolute;
+  top: 65%;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 35px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.preload-subtext {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.preload-finish {
+  top: -200%;
+  pointer-events: none;
+}
+
+/* ----------------------------------------------- */
+/* LANDING PAGE */
+/* ----------------------------------------------- */
+
+main {
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transition: -webkit-backdrop-filter 1.5s;
+  transition: -webkit-backdrop-filter 1.5s;
+  -o-transition: backdrop-filter 1.5s;
+  transition: backdrop-filter 1.5s;
+  transition: backdrop-filter 1.5s, -webkit-backdrop-filter 1.5s;
+  -webkit-transition-delay: 1.5s;
+  -o-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+}
+
+.arin-intro {
+  -webkit-backdrop-filter: brightness(30%);
+  backdrop-filter: brightness(30%);
+}
+
+.home-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.centered-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-content {
+  display: none; /* changed by js TODO use keyframes directly, not html*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.arin-logo {
+  width: 300px;
+}
+
+/* ----- SOCIALS ----- */
+.socials-container {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.syber-logo {
+  width: 50px;
+  border-radius: 50%;
+  -webkit-filter: opacity(0.9);
+  filter: opacity(0.9);
+  margin-right: 3px;
+}
+.socials-container a {
+  margin-left: 10px;
+}
+.socials-container a:link,
+.socials-container a:visited {
+  text-decoration: none;
+  color: white;
+}
+.socials-container a:active,
+.socials-container a:hover {
+  color: #ff2f5b;
+}
+.discord-container {
+  position: absolute;
+  display: none;
+  right: 2% !important;
+  top: 2% !important;
+}
+
+.discord {
+  width: 50px;
+  border-radius: 50%;
+  -webkit-filter: opacity(0.9);
+  filter: opacity(0.9);
+  
+}
+
+/* ----- BUTTONS ----- */
+.btn {
+  /* font-family: "Arial","Sans-serif"; */
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-transition: border 0.2s, color 0.2s, background-color 0.2s,
+    font-weight 0.2s;
+  -o-transition: border 0.2s, color 0.2s, background-color 0.2s,
+    font-weight 0.2s;
+  transition: border 0.2s, color 0.2s, background-color 0.2s, font-weight 0.2s;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+}
+
+.btn-bordered {
+  border: 2px solid white;
+  padding: 10px 30px;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-link {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 10px 15px;
+  color: white;
+  font-size: 90%;
+}
+
+.btn:hover,
+.btn:active {
+  color: #ff2f5b;
+}
+
+.btn-bordered:hover,
+.btn-bordered:active {
+  border: 2px solid #ff2f5b;
+  background-color: white;
+  font-weight: 600;
+}
+
+.btn-link:hover::after,
+.btn-link:active::after {
+  background: #ff2f5b;
+}
+
+#puzzle-btn-border {
+  right: 0;
+  display: none;
+}
+
+#about-btn-border {
+  left: 0;
+  display: none;
+}
+
+#about-btn,
+#puzzle-btn {
+  display: none;
+}
+
+.shadow::before,
+.shadow::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0px;
+}
+
+.shadow--right::after {
+  right: -1px;
+  background: white;
+  -webkit-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.shadow--left::after {
+  left: -1px;
+  background: white;
+  -webkit-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+/* ----- RADIOBUTTONS ----- */
+.radiobuttons-container {
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  display: none;
+}
+
+.radiobuttons-container input {
+  display: none;
+}
+
+.radiobuttons-container label {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.radiobuttons-container label:before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  -webkit-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+
+.radiobuttons-container input:checked + label:before {
+  background: #ff2f5b;
+}
+
+.rotate {
+  animation: rotation 2s ease-in-out 1s infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

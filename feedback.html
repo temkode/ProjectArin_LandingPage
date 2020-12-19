@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-175463119-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-175463119-1");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Play as Arin to uncover the secrets of a post apocalyptic 2084 Mongolia, revive its technology through scientific puzzles, and combat projects gone awry."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./resources/css/bel/feedback.css" />
+
+    <title>Teaser - Feedback form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Project Arin's Teaser Feedback Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help us improve our game.
+        </p>
+      </header>
+      <form id="survey-form" name="survey" method="POST" data-netlify="true" action="/feedbacksuccess.html">
+        <div class="form-group">
+          <p>1. Rate our game</p>
+          <div class="range-wrap">
+            <input
+              name="ourGameRated"
+              id="our-game"
+              type="range"
+              class="range"
+              value="0"
+              min="0"
+              max="10"
+            />
+            <output class="bubble"></output>
+          </div>
+        </div>
+        <div class="form-group">
+          <p>2. Rate our theme</p>
+          <div class="range-wrap">
+            <input
+              name="ourThemeRated"
+              id="our-theme"
+              type="range"
+              class="range"
+              value="0"
+              min="0"
+              max="10"
+            />
+            <output class="bubble"></output>
+          </div>
+        </div>
+        <div class="form-group">
+          <p>
+            What was your favourite feature of our teaser?
+          </p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="puzzles">Puzzle</option>
+            <option value="mechanics">Mechanics</option>
+            <option value="art_assets">Art assets</option>
+            <option value="theme">Theme</option>
+            <option value="dialogue">Dialogues</option>
+            <option value="ending">Ending</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email"
+            >Email<span class="clue">(optional)</span></label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+
+        <div class="form-group">
+          <p>
+            Any comments or suggestions?<span class="clue">(optional)</span>
+          </p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="./resources/css/bel/range.js"></script>
+  </body>
+</html>
